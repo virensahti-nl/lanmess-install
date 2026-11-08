@@ -54,7 +54,7 @@ fi
 echo "lanmess executable: $LANMESS_EXEC"
 
 # --- 8. Optional desktop launcher ---
-read -p "Create a desktop launcher for lanmess? (y/n): " choice
+read -p "Create a desktop launcher for lanmess? (y/n) (yes or no): " choice
 if [[ "$choice" =~ ^[yY] ]]; then
     DESKTOP_DIR="$HOME/Desktop"
     [ -d "$DESKTOP_DIR" ] || DESKTOP_DIR="$HOME"
