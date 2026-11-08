@@ -64,7 +64,7 @@ if (-not $lanmessExe) {
 Write-Host "lanmess executable: $lanmessExe"
 
 # --- 9. Optional desktop shortcut ---
-$response = Read-Host "Create a desktop shortcut for lanmess? (y/n)"
+$response = Read-Host "Create a desktop shortcut for lanmess? (y/n) (yes or no)"
 if ($response -match '^[yY]') {
     $desktop = [Environment]::GetFolderPath("Desktop")
     $shortcutPath = Join-Path $desktop "lanmess.lnk"
