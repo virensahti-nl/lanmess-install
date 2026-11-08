@@ -16,6 +16,8 @@ if ! echo "$PATH" | grep -q "$PYTHON_BIN_PATH"; then
     export PATH="$HOME/.local/bin:$PATH"
 fi
 
+LANMESS_EXEC=$(which lanmess 2>/dev/null || echo "$HOME/.local/bin/lanmess")
+
 read -p "Do you want to create a desktop shortcut for lanmess? (y/n): " choice
 if [ "$choice" = "y" ] || [ "$choice" = "Y" ]; then
     DESKTOP_DIR="$HOME/Desktop"
@@ -24,7 +26,7 @@ if [ "$choice" = "y" ] || [ "$choice" = "Y" ]; then
 [Desktop Entry]
 Type=Application
 Name=lanmess
-Exec=$HOME/.local/bin/lanmess
+Exec=$LANMESS_EXEC
 Terminal=true
 Categories=Network;
 EOF
